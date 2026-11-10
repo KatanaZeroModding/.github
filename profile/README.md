@@ -1,211 +1,147 @@
 <p align="center">
   <a href="https://kzm.bar">
-    <img src="./logotype.png" alt="KZM" width="144" />
+    <img src="./logotype.png" alt="" width="72" />
   </a>
 </p>
 
-<h1 align="center">Katana Zero Modding</h1>
+<h1 align="center">Katana ZERO<br />Modding</h1>
 
 <p align="center">
-  <strong>Same game. New possibilities.</strong><br />
-  Знакомая игра. Новые возможности.
+  <strong>Знакомая игра. Новые возможности.</strong>
 </p>
 
 <p align="center">
-  KZM is a Windows launcher, a command-line tool, and a Lua SDK<br />
-  for installing, playing, and writing Katana ZERO mods.
+  Моды для Katana ZERO — установка, профили и запуск из одного лаунчера.
 </p>
 
 <p align="center">
-  <a href="https://github.com/KatanaZeroModding/KZM/blob/main/LICENSE"><img src="https://img.shields.io/github/license/KatanaZeroModding/KZM?style=flat-square&label=KZM&color=ff4f9a" alt="KZM license: AGPL-3.0" /></a>
-  <a href="https://github.com/KatanaZeroModding/KZM/blob/main/docs/PLAYING.md"><img src="https://img.shields.io/badge/platform-Windows-ff4f9a?style=flat-square" alt="Platform: Windows" /></a>
-  <a href="https://kzm.bar"><img src="https://img.shields.io/badge/website-kzm.bar-55e4df?style=flat-square" alt="Website: kzm.bar" /></a>
-  <a href="https://ko-fi.com/an1by"><img src="https://img.shields.io/badge/support-Ko--fi-ff4f9a?style=flat-square" alt="Support on Ko-fi" /></a>
+  <a href="https://github.com/KatanaZeroModding/KZM/releases/latest"><strong>Скачать лаунчер</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/KatanaZeroModding/KZM/blob/main/docs/MODDING.md">Создать мод</a>
 </p>
 
 <p align="center">
-  <a href="#play">Play</a> |
-  <a href="#create-a-mod">Create a mod</a> |
-  <a href="#repositories">Repositories</a> |
-  <a href="#how-it-fits-together">How it fits together</a> |
-  <a href="https://github.com/KatanaZeroModding/KZM/blob/main/docs/README.md">Documentation</a> |
-  <a href="https://kzm.bar">kzm.bar</a> |
-  <a href="#ru">По-русски</a>
+  <sub>Windows · Бесплатно и с открытым кодом</sub>
 </p>
 
-New characters, mechanics, and stories start as mods. This organization is the home for that work: the KZM tools, the site, the editor extension, the templates, and the mods built with them.
-
-## Play
-
-1. Take a Windows bundle from [KZM releases](https://github.com/KatanaZeroModding/KZM/releases) when one is published, plus a compatible [`libLassebq.dll`](https://github.com/nkrapivin/libLassebq/releases).
-2. Point **kzm-launcher** at the folder that contains `Katana ZERO.exe` and `data.win`. Run **Setup libLassebq base…** once. KZM keeps a backup of that archive.
-3. Drop a `.kzm` into the import folder, enable it in a profile, and press **Play**.
-
-[Player guide](https://github.com/KatanaZeroModding/KZM/blob/main/docs/PLAYING.md) · [Инструкция на русском](https://github.com/KatanaZeroModding/KZM/blob/main/README_RU.md) · [Troubleshooting](https://github.com/KatanaZeroModding/KZM/blob/main/docs/TROUBLESHOOTING.md)
-
-KZM needs a legally owned copy of Katana ZERO. The game itself is not part of these repositories. Compatibility with a game edition and with other mods is stated on each mod.
-
-## Create a mod
-
-```bash
-kzm init my-mod
-kzm build
-```
-
-`kzm init --clang` starts from the C template. The [mod author guide](https://github.com/KatanaZeroModding/KZM/blob/main/docs/MODDING.md) covers the manifest, the Lua SDK, localization, and packing a `.kzm`. [KZM for VS Code and Cursor](https://github.com/KatanaZeroModding/kzm-vsx) edits `mod.toml` and runs build and pack from the editor.
-
-[CLI reference](https://github.com/KatanaZeroModding/KZM/blob/main/docs/CLI.md) · [Manifest](https://github.com/KatanaZeroModding/KZM/blob/main/docs/spec/mod.toml.md) · [Build KZM from source](https://github.com/KatanaZeroModding/KZM/blob/main/docs/BUILD.md)
-
-## Repositories
-
-### Platform
-
-| Repository | Role |
-| --- | --- |
-| [**KZM**](https://github.com/KatanaZeroModding/KZM) | Launcher, `kzm` CLI, Lua runtime and SDK, native plugin host, content-patch pipeline, documentation |
-| [**WebSite**](https://github.com/KatanaZeroModding/WebSite) | [kzm.bar](https://kzm.bar) — the public site |
-| [**kzm-vsx**](https://github.com/KatanaZeroModding/kzm-vsx) | VS Code / Cursor extension for `mod.toml`, build, and pack |
-| [**kzm-api**](https://github.com/KatanaZeroModding/kzm-api) | Published API name index (`kzm-api.json`) for tooling and docs |
-
-### Mods
-
-| Repository | Role |
-| --- | --- |
-| [**kzm-discord-mod**](https://github.com/KatanaZeroModding/kzm-discord-mod) | Discord Rich Presence: place, track, and character |
-| [**kzm-online-mod**](https://github.com/KatanaZeroModding/kzm-online-mod) | Co-op and PVP lockstep over Steam, friends only |
-| [**kzm-squick-mod**](https://github.com/KatanaZeroModding/kzm-squick-mod) | Skip the startup prompts and resume a saved speedrun |
-| [**kzm-bunker-pistol-mod**](https://github.com/KatanaZeroModding/kzm-bunker-pistol-mod) | The Bunker 2 pistol fires instead of being thrown |
-
-### Templates
-
-| Repository | Role |
-| --- | --- |
-| [**template-mod**](https://github.com/KatanaZeroModding/template-mod) | `kzm init` — Lua and Rust, MIT |
-| [**template-mod-clang**](https://github.com/KatanaZeroModding/template-mod-clang) | `kzm init --clang` — Lua and C, MIT |
-
-## How it fits together
-
-```text
-Katana ZERO
-  └── KZM
-        ├── Profile
-        │     └── Enabled mods (.kzm)
-        ├── Lua runtime and SDK
-        ├── Native plugin host
-        └── Content patches the mod declares
-```
-
-A profile is one loadout. **Play** deploys that loadout and starts the game. **Restore vanilla** returns the archive saved during setup.
-
-```text
-mod.toml
-  ├── Lua
-  ├── Native plugin, when the mod has one
-  └── Localization and dialogue
-```
-
-`kzm build` installs and enables the mod in development. `kzm pack` produces the `.kzm` players drop into the launcher.
-
-## Community
-
-Created by **[An1by](https://github.com/an1by)** · [Support on Ko-fi](https://ko-fi.com/an1by).
-
-For help, start with the [troubleshooting guide](https://github.com/KatanaZeroModding/KZM/blob/main/docs/TROUBLESHOOTING.md), then [open an issue](https://github.com/KatanaZeroModding/KZM/issues) with versions, the exact error, and steps. To work on KZM itself, read [CONTRIBUTING](https://github.com/KatanaZeroModding/KZM/blob/main/CONTRIBUTING.md).
-
-KZM is an independent community project. Katana ZERO — its title, characters, story, and assets — belongs to [Askiisoft](https://askiisoft.com/) and the respective rights holders. [What these repositories are, and are not](https://github.com/KatanaZeroModding/KZM/blob/main/docs/COMMUNITY_AND_GAME_IP.md).
-
-KZM is [AGPL-3.0](https://github.com/KatanaZeroModding/KZM/blob/main/LICENSE). Mod templates are MIT. Each mod repository states its own license.
-
----
-
-<h2 id="ru">По-русски</h2>
-
 <p align="center">
-  <a href="#play-ru">Играть</a> |
-  <a href="#create-ru">Создать мод</a> |
-  <a href="#repos-ru">Репозитории</a> |
-  <a href="#how-ru">Как это устроено</a> |
-  <a href="https://github.com/KatanaZeroModding/KZM/blob/main/README_RU.md">Инструкция</a> |
+  <a href="#en">English</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://kzm.bar">kzm.bar</a>
 </p>
 
-Новые персонажи, механики и истории начинаются с модов. Здесь собрано всё, чем это делается: инструменты KZM, сайт, расширение редактора, шаблоны и моды на их основе.
+## Привычно и легко
 
-<h3 id="play-ru">Играть</h3>
+Новые персонажи, механики и истории начинаются с модов. KZM собирает работу с ними в одном месте: от установки пакета до запуска Katana ZERO.
 
-1. Возьмите сборку для Windows со [страницы релизов KZM](https://github.com/KatanaZeroModding/KZM/releases), когда она опубликована, и совместимый [`libLassebq.dll`](https://github.com/nkrapivin/libLassebq/releases).
-2. В **kzm-launcher** укажите папку с `Katana ZERO.exe` и `data.win`. Один раз нажмите **Setup libLassebq base…**. KZM сохранит резервную копию этого архива.
-3. Положите `.kzm` в папку импорта, включите мод в профиле и нажмите **Play**.
+1. **Укажите игру**
 
-[Инструкция на русском](https://github.com/KatanaZeroModding/KZM/blob/main/README_RU.md) · [Player guide](https://github.com/KatanaZeroModding/KZM/blob/main/docs/PLAYING.md)
+   Выберите папку Katana ZERO и выполните первоначальную настройку по инструкции. Лаунчер сохранит резервную копию игровых данных.
 
-Нужна своя легальная копия Katana ZERO. Самой игры в этих репозиториях нет. Совместимость с изданием игры и с другими модами указана в описании каждого мода.
+2. **Добавьте моды**
 
-<h3 id="create-ru">Создать мод</h3>
+   Положите готовый .kzm в папку импорта или установите его через лаунчер. Включите нужные моды и сохраните набор в профиле.
 
-```bash
-kzm init my-mod
-kzm build
-```
+3. **Нажмите «Играть»**
 
-`kzm init --clang` берёт шаблон на C. [Руководство автора](https://github.com/KatanaZeroModding/KZM/blob/main/docs/MODDING.md) описывает манифест, Lua SDK, локализацию и упаковку `.kzm`. [Расширение для VS Code и Cursor](https://github.com/KatanaZeroModding/kzm-vsx) правит `mod.toml` и запускает сборку и упаковку из редактора.
+   KZM применит выбранные моды и запустит игру. Для другого набора просто переключите профиль.
 
-<h3 id="repos-ru">Репозитории</h3>
+[Инструкция по установке](https://github.com/KatanaZeroModding/KZM/blob/main/README_RU.md)
 
-**Платформа**
+Для KZM нужна установленная легальная копия Katana ZERO. Мы не поддерживаем пиратство. Совместимость с версией игры и другими модами указана в описании каждого мода.
 
-| Репозиторий | Зачем |
-| --- | --- |
-| [**KZM**](https://github.com/KatanaZeroModding/KZM) | Лаунчер, CLI `kzm`, Lua runtime и SDK, хост нативных плагинов, патчи контента, документация |
-| [**WebSite**](https://github.com/KatanaZeroModding/WebSite) | Сайт [kzm.bar](https://kzm.bar) |
-| [**kzm-vsx**](https://github.com/KatanaZeroModding/kzm-vsx) | Расширение VS Code / Cursor: `mod.toml`, сборка и упаковка |
-| [**kzm-api**](https://github.com/KatanaZeroModding/kzm-api) | Опубликованный индекс имён API (`kzm-api.json`) |
+## Следующий ход — за вами.
 
-**Моды**
+Поиграть, сделать что-то своё или помочь проекту.
 
-| Репозиторий | Зачем |
-| --- | --- |
-| [**kzm-discord-mod**](https://github.com/KatanaZeroModding/kzm-discord-mod) | Discord Rich Presence: место, трек и персонаж |
-| [**kzm-online-mod**](https://github.com/KatanaZeroModding/kzm-online-mod) | Кооп и PVP в lockstep через Steam, только для друзей |
-| [**kzm-squick-mod**](https://github.com/KatanaZeroModding/kzm-squick-mod) | Пропуск стартовых вопросов и продолжение сохранённого спидрана |
-| [**kzm-bunker-pistol-mod**](https://github.com/KatanaZeroModding/kzm-bunker-pistol-mod) | Пистолет из Бункера 2 стреляет, а не бросается |
+**[Скачать лаунчер](https://github.com/KatanaZeroModding/KZM/releases/latest)**  
+Актуальный релиз для Windows
 
-**Шаблоны**
+**[Создать свой мод](https://github.com/KatanaZeroModding/KZM/blob/main/docs/MODDING.md)**  
+От первого скрипта до готового пакета
 
-| Репозиторий | Зачем |
-| --- | --- |
-| [**template-mod**](https://github.com/KatanaZeroModding/template-mod) | `kzm init` — Lua и Rust, MIT |
-| [**template-mod-clang**](https://github.com/KatanaZeroModding/template-mod-clang) | `kzm init --clang` — Lua и C, MIT |
+**[Заглянуть в код](https://github.com/KatanaZeroModding/KZM)**  
+Исходники, обсуждения и развитие KZM
 
-<h3 id="how-ru">Как это устроено</h3>
+**[Поддержать автора](https://ko-fi.com/an1by)**  
+Помочь развитию проекта
 
-```text
-Katana ZERO
-  └── KZM
-        ├── Профиль
-        │     └── Включённые моды (.kzm)
-        ├── Lua runtime и SDK
-        ├── Хост нативных плагинов
-        └── Патчи контента, которые заявил мод
-```
+<p align="center">
+  Сделано для сообщества. <a href="https://github.com/an1by">An1by</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://kzm.bar">kzm.bar</a>
+</p>
 
-Профиль — это один набор модов. **Play** применяет набор и запускает игру. **Restore vanilla** возвращает архив, сохранённый при настройке.
+<p align="center">
+  <sub>
+    KZM — независимый проект сообщества, не связанный с разработчиками Katana ZERO.<br />
+    Katana ZERO и игровые материалы принадлежат Askiisoft и соответствующим правообладателям.
+  </sub>
+</p>
 
-```text
-mod.toml
-  ├── Lua
-  ├── Нативный плагин, если он есть у мода
-  └── Локализация и диалоги
-```
+---
 
-`kzm build` ставит мод и включает его во время разработки. `kzm pack` собирает `.kzm`, который игрок кладёт в лаунчер.
+<h2 id="en" align="center">Same game. New possibilities.</h2>
 
-<h3 id="community-ru">Сообщество</h3>
+<p align="center">
+  Mods for Katana ZERO — install, profiles, and launch from one launcher.
+</p>
 
-Автор — **[An1by](https://github.com/an1by)** · [Поддержать на Ko-fi](https://ko-fi.com/an1by).
+<p align="center">
+  <a href="https://github.com/KatanaZeroModding/KZM/releases/latest"><strong>Download launcher</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/KatanaZeroModding/KZM/blob/main/docs/MODDING.md">Create a mod</a>
+</p>
 
-Если что-то сломалось, начните с [диагностики](https://github.com/KatanaZeroModding/KZM/blob/main/docs/TROUBLESHOOTING.md) и [откройте issue](https://github.com/KatanaZeroModding/KZM/issues): версии, точный текст ошибки, шаги. Чтобы дорабатывать сам KZM — [CONTRIBUTING](https://github.com/KatanaZeroModding/KZM/blob/main/CONTRIBUTING.md).
+<p align="center">
+  <sub>Windows · Free and open source</sub>
+</p>
 
-KZM — независимый проект сообщества. Katana ZERO, её название, персонажи, сюжет и материалы принадлежат [Askiisoft](https://askiisoft.com/) и соответствующим правообладателям.
+## Familiar and easy
 
-KZM распространяется под [AGPL-3.0](https://github.com/KatanaZeroModding/KZM/blob/main/LICENSE). Шаблоны модов — MIT. Лицензия каждого мода указана в его репозитории.
+New characters, mechanics, and stories start with mods. KZM brings the workflow together — from installing a package to launching Katana ZERO.
+
+1. **Point to your game**
+
+   Select your Katana ZERO folder and complete the one-time setup. The launcher keeps a backup of your game data.
+
+2. **Add mods**
+
+   Drop a .kzm into the import folder or install through the launcher. Enable mods and save your loadout in a profile.
+
+3. **Hit Play**
+
+   KZM applies your mods and starts the game. Switch profiles for a different loadout.
+
+[Installation guide](https://github.com/KatanaZeroModding/KZM/blob/main/README.md)
+
+KZM requires a legally owned copy of Katana ZERO. We do not support piracy. Game version and mod compatibility are listed in each mod’s description.
+
+## Your move next.
+
+Play, build something new, or support the project.
+
+**[Download launcher](https://github.com/KatanaZeroModding/KZM/releases/latest)**  
+Latest release for Windows
+
+**[Create your mod](https://github.com/KatanaZeroModding/KZM/blob/main/docs/MODDING.md)**  
+From first script to a shippable package
+
+**[Browse the code](https://github.com/KatanaZeroModding/KZM)**  
+Source, discussions, and KZM development
+
+**[Support the author](https://ko-fi.com/an1by)**  
+Help the project grow
+
+<p align="center">
+  Made for the community. <a href="https://github.com/an1by">An1by</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://kzm.bar">kzm.bar</a>
+</p>
+
+<p align="center">
+  <sub>
+    KZM is an independent community project, not affiliated with the developers of Katana ZERO.<br />
+    Katana ZERO and related assets belong to Askiisoft and their respective rights holders.
+  </sub>
+</p>
